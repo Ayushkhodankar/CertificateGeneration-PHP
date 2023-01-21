@@ -273,7 +273,7 @@ if ($conn->connect_error) {
 									<button type="button" class="btn btn-primary mt-2 mb-3" data-bs-toggle="collapse" data-bs-target="#myAccordion" aria-expanded="true">Verify again</button>
 									<div class="accordion-item" style="background-color: inherit">
 										<h2 class="accordion-header" id="flush-headingOne"></h2>
-										<div class="accordion-collapse collapse show" id="myAccordion" aria-labelledby="flush-headingOne" data-bs-parent="#isVerifiedBg" style="">
+										<div class="accordion-collapse collapse show" id="myAccordion" aria-labelledby="flush-headingOne" data-bs-parent="#isVerifiedBg" >
 											<div class="accordion-body">
 												<div class="container">
 													<div class="row">
