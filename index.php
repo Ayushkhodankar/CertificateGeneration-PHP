@@ -28,6 +28,13 @@ https://templatemo.com/tm-582-tale-seo-agency
 
 -->
   <style>
+    #right {
+  position: absolute;
+  left: 31%;
+  width: 100%;
+  border: 0px solid #73AD21;
+  padding: 1px;
+}
     table {
       border-collapse: collapse;
       width: 100%;
@@ -220,18 +227,18 @@ if (isset($_GET['submit'])) {
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="contact-us section" id="contact">
-    <div class="container">
+  <div class="contact-us section" id="contact" style="align-self:center;">
+    <div class="container" id="right">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6" >
           <div class="contact-us-content">
-            <div class="row">
+            <div class="row" >
               <form id="contact-form" action="results.php" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <div class="row">
+                <div class="row" >
                   <div class="col-lg-12">
                     <div class="section-heading">
                       <h2><em>Verify For Certificate Details</em></h2>
-                      <span>Enter Email and Certificate No.</span>
+                      <span>Enter Email For Certificate Verification</span>
                     </div>
 
                   </div>
@@ -250,7 +257,7 @@ if (isset($_GET['submit'])) {
                     </fieldset>
                   </div> -->
 
-                  <div class="col-lg-12">
+                  <div>
                     <fieldset>
                       <button type="submit" id="submit" name="submit" class="">Search</button>
                     </fieldset>

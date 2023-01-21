@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="table.css" />
   <!--
 
 TemplateMo 582 Tale SEO Agency
@@ -28,6 +29,28 @@ https://templatemo.com/tm-582-tale-seo-agency
 
 -->
   <style>
+    .button {
+      display: inline-block;
+      padding: 1px 10px;
+      font-size: 18px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #b151e5;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 5px #999;
+    }
+    
+    .button:hover {background-color: #653e8e}
+    
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
     table {
       border-collapse: collapse;
       width: 100%;
@@ -72,7 +95,7 @@ $username = "root";
 $password = "";
 $dbname = "asterisc_certificate_student";
 
-
+$a=1;
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname, 3306);
 
@@ -199,17 +222,22 @@ if (isset($_GET['submit'])) {
             <div class="row">
 
               <div class="row">
-                <div class="col-lg-12">
+                <div>
                   <div class="section-heading">
                     <h2 align="center"><em>Available Certificates</em></h2>
+                    <h5 align="center"><span style="color: red;"> E-Mail :</span><i> <?php echo $email ?></i></h5>
+                    <br/>
+                    <table class="tab">
+            <thead>
+                <tr>
+                    <th scope="col" bgcolor="#b151e5" >Sr.</th>
+                    <th scope="col"bgcolor="#b151e5">Course</th>
+                    <th scope="col"bgcolor="#b151e5">Duration</th>
+                    <th scope="col" bgcolor="#b151e5">Course Details</th>
+                    <th scope="col" bgcolor="#b151e5">Fees</th>
 
-                    <table>
-                      <tr>
-                        <th>Certificate Number</th>
-                        <th>Certificate Date</th>
-                        <th>Course</th>
-                        <th>Action</th>
-                      </tr>
+                </tr>
+            </thead>
                       <tr>
                         <?php
                         if (isset($_POST["submit"])) {
@@ -221,19 +249,21 @@ if (isset($_GET['submit'])) {
                           if ($result->num_rows > 0) {
                             // output data of each row  
                             while ($row = $result->fetch_assoc()) { ?>
-                              <td><?php echo $row["cnumber"] ?></td>
-                              <td><?php echo $row["course_name"] ?></td>
-                              <td><?php echo $row["cdate"] ?></td>
+                            <td><center><b><?php echo $a."." ?></b></center></td>
+                             <td><center><?php echo $row["course_name"] ?></center></td>
+                              <td><center> <?php echo $row["cnumber"] ?></center> </td>
+                              <td><center><?php echo $row["cdate"] ?></center></td>
                               <td>
                                 <form action="certificate.php" method="post">
 
-                                  <input type="hidden" value="<?php echo $row["email"] ?>" name="pro_email" id="pro_email">
-                                  <input type="submit" class="btn btn-primary" value="View" name="View">
+                                  <input type="hidden" value="<?php echo $row["cnumber"] ?>" name="pro_cnumber" id="pro_cnumber">
+                                 <center> <input type="submit" class="button" value="View" name="View"></center>
 
                                 </form>
                               </td>
                       </tr>
                   <?php
+                  $a++;
                             }
                           } else {
                             echo "0 results";

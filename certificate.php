@@ -100,8 +100,8 @@ $dbname = "asterisc_certificate_student";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname, 3306);
-$email = $_POST['pro_email'];
-$res = mysqli_query($conn, "select * from event_certificate where email='" . $email . "' limit 1");
+$cnumber = $_POST['pro_cnumber'];
+$res = mysqli_query($conn, "select * from event_certificate where cnumber='" . $cnumber . "' limit 1");
 $row = mysqli_fetch_assoc($res);
 $sname = $row['sname'];
 $cname = $row['course_name'];
