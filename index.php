@@ -252,7 +252,7 @@ if (isset($_GET['submit'])) {
 
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="submit" name="submit" class="collapsible">Search</button>
+                      <button type="submit" id="submit" name="submit" class="">Search</button>
                     </fieldset>
                   </div>
                 </div>
@@ -265,7 +265,7 @@ if (isset($_GET['submit'])) {
       </div>
     </div>
   </div>
-  <!-- <button type="button" class="collapsible">Get Available Search Results</button> -->
+  <button type="button" class="collapsible">Get Available Search Results</button>
   <div class="content">
     <div class="infos section" id="infos">
       <div class="container">
