@@ -108,23 +108,12 @@ $cname = $row['course_name'];
 $cdate = $row['cdate'];
 $cnumber = $row['cnumber'];
 
-// if(mysqli_num_rows($res)>0){
-//   header('content-type:image/png');
-// $font="Roboto-black.ttf";
-// $image=imagecreatefrompng("certificate.png");
-// $color=imagecolorallocate($image,19,21,22);
-// while($row=mysqli_fetch_assoc($res)){
-//   $name=$row['name'];
-//   imagettftext($image,50,0,365,420,$color,$font,$name);
 
-// }
-// }
 
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-// echo "Connected successfully";
 
 ?>
 
@@ -154,9 +143,7 @@ if ($conn->connect_error) {
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#general-information">General Information</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#share">Share</a></li>
 					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wallet">Add to wallet</a></li>
-					<!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-					<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
+				
 				</ul>
 			</div>
 		</nav>

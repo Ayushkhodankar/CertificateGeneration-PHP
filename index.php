@@ -226,7 +226,7 @@ if (isset($_GET['submit'])) {
         <div class="col-lg-12">
           <div class="contact-us-content">
             <div class="row">
-              <form id="contact-form" action="" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+              <form id="contact-form" action="results.php" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="section-heading">
@@ -242,13 +242,13 @@ if (isset($_GET['submit'])) {
 
                     </fieldset>
                   </div>
-                  <div>
+                  <!-- <div>
                     <fieldset>
 
                       <input type="text" name="cnumber" id="cnumber" placeholder="Certificate Number" autocomplete="on" required>
 
                     </fieldset>
-                  </div>
+                  </div> -->
 
                   <div class="col-lg-12">
                     <fieldset>
@@ -265,83 +265,9 @@ if (isset($_GET['submit'])) {
       </div>
     </div>
   </div>
-  <button type="button" class="collapsible">Get Available Search Results</button>
-  <div class="content">
-    <div class="infos section" id="infos">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="main-content">
-              <div class="row">
+  
 
-                <div>
-                  <div class="section-heading">
-                    <h2 align="center"><em>Available Certificates</em></h2>
 
-                    <table>
-                      <tr>
-                        <th>Certificate Number</th>
-                        <th>Certificate Date</th>
-                        <th>Course</th>
-                        <th>Action</th>
-                      </tr>
-                      <tr>
-                        <?php
-                        if (isset($_POST["submit"])) {
-                          $email = $_POST["email"];
-
-                          $sql = "SELECT * FROM event_certificate where email='$email'";
-                          $result = $conn->query($sql);
-
-                          if ($result->num_rows > 0) {
-                            // output data of each row  
-                            while ($row = $result->fetch_assoc()) { ?>
-                              <td><?php echo $row["cnumber"] ?></td>
-                              <td><?php echo $row["course_name"] ?></td>
-                              <td><?php echo $row["cdate"] ?></td>
-                              <td>
-                                <form action="certificate.php" method="post">
-
-                                  <input type="hidden" value="<?php echo $row["email"] ?>" name="pro_email" id="pro_email">
-                                  <input type="submit" class="btn btn-danger" value="verify" name="verify">
-
-                                </form>
-                              </td>
-                      </tr>
-                <?php
-                            }
-                          } else {
-                            echo "0 results";
-                          }
-                        }
-                        else{ ?>
-                          <td colspan="4" align="center"> <b>Please Enter The Details In The Form First.</b></td>
-                        <?php }
-                ?>
-                    </table>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2036 <a href="#">Tale SEO Agency</a>. All rights reserved.
-
-          <br>Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a
-            href="https://themewagon.com">ThemeWagon</a>
-        </p>
-      </div>
-    </div>
-  </footer>
--->
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
