@@ -265,7 +265,6 @@ if ($conn->connect_error) {
                
               </div>
             </div>
-
             <!-- Button trigger modal -->
             <div id="isVerifiedBg" class="p-3 isVerifiedContainer accordion accordion-flush" style="background-color: rgba(42,178,123,0.1); border-left: 3px solid #2ab27b;">
 									<img id="isVerifiedLogo" class="pr-1" src="images/greenLogo.png" style="height: 25px; width: 25px"><strong id="isVerified">Verified</strong>
