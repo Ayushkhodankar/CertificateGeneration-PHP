@@ -232,8 +232,8 @@ if (isset($_GET['submit'])) {
                 <tr>
                     <th scope="col" bgcolor="#b151e5" >Sr.</th>
                     <th scope="col"bgcolor="#b151e5">Course</th>
-                    <th scope="col"bgcolor="#b151e5">Duration</th>
-                    <th scope="col" bgcolor="#b151e5">Course Details</th>
+                    <th scope="col"bgcolor="#b151e5">Certification No.</th>
+                    <th scope="col" bgcolor="#b151e5">Issued Date</th>
                     <th scope="col" bgcolor="#b151e5">Fees</th>
 
                 </tr>
