@@ -279,8 +279,8 @@ if ($conn->connect_error) {
 														<div class="col-lg-4" id="picture"><img id="modalLogo" style="width: 100%; max-width: 100px" src="https://issuer.gutenbergcerts.com/images/yellowLogo.png"></div>
 														<div class="col-lg-8">
 															<div class="row" style="font-size: large" id="title">Be smart in a smart world. What counts in a digital workplace?</div>
-															<div class="row" style="font-size: large" id="name">Bhavika Gandait</div>
-															<div class="row" style="font-size: small" id="issued">Issued on Thu, 10 Nov 2022 05:29:41 GMT by Employability</div>
+															<div class="row" style="font-size: large" id="name"></div>
+															<div class="row" style="font-size: small" id="issued"></div>
 														</div>
 													</div>
 												</div>
